@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to left,#D2D2FE, #7E7CFD);
+    height: 100%;
+    width: 100%;
+}
+
+.user {
+    font-weight: bolder;
+}
+
+.output {
+    font-size: 2rem;
+}
+
+
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+}
+
+.container * {
+    margin-top: 0.25rem;
+}
+
+.login {
+    border-color: transparent;
+    background-color: black;
+    color: white;
+    min-width: 120%;
+    height: 50px;
+    margin-top: 1rem;
+}
+.box {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    background-color: #fff;
+    padding: 1rem;
+    padding-bottom: 0;
+    overflow: hidden;
+    box-shadow: 8px 8px 39px 16px rgba(66, 68, 90, 1);
+    border-radius: 3px;
+}
+
+.login:hover {
+    background-color: #333;
+}
+
+.nav {
+    margin-top: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #fff;
+}

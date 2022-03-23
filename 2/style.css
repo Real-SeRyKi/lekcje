@@ -1,0 +1,31 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to left,#D2D2FE, #7E7CFD);
+    height: 100%;
+    width: 100%;
+}
+
+table td, table th {
+    border-color: #000;
+    border-style: solid;
+    margin:0;
+}
+table {
+    border-collapse:collapse;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.form {
+    margin-top: 1rem;
+}
+
+.form * {
+    margin-top: 0.5rem;
+}
