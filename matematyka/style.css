@@ -1,0 +1,21 @@
+/* Standard start css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000;
+    width: 100%;
+    height: 100%;
+    /* Display flex */
+    display: -webkit-flex;
+    display: flex;
+    
+    /* Center items in flex */
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+}
+

@@ -1,0 +1,46 @@
+/* standard start css*/
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #fcf6e1 0%, #fffac7 13%, #e0eff7 33%, #ecdff3 51%, #ecdff3 51%, #ffdadd 73%, #d7f1ed 95%);
+    overflow: hidden;
+}
+
+/* make content div */
+/* white background */
+/* rounded corners of 0.125rem */
+/* box-shadow */
+/* padding 1rem */
+/* margin 1rem */
+.content {
+    background-color: #fff;
+    border-radius: 0.125rem;
+    /* make box-shadow */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.125);
+    padding: 1rem;
+    margin: 2rem 20rem 1rem;
+
+    /* Make everything i there centered with flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 90%;
+    max-height: fit-content;
+}
+
+p {
+    width: 75%;
+    text-align: center;
+    /* Make text big and bold */
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+img {
+    width: 700px;
+    margin-top: 2rem;
+}

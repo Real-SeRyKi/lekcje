@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Import jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Impoer angularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+9
+    <!-- Import bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Import bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Import font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- Lorem ipsum paragraph -->
+    <p class="lorem-ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+    </p>
+
+
+
+    <div class="content">
+        <span id="spana">A: </span><input type="text" id="a" class="in"><br>
+        <span id="spanb">B: </span><input type="text" id="b" class="in"><br>
+        <span id="spanc">C: </span><input type="text" id="c" class="in"><br>
+        <Select id="test">
+            <option value="prostokat">Prostokąt</option>
+            <option value="trojkat">Trójkąt</option>
+            <option value="kolo">Koło</option>
+            <option value="trapez">Trapez</option>
+            <option value="romb">Romb</option>
+        </Select><br>
+        <div id="output"></div><br>
+        <button>Oblicz</button>
+    </div>
+    <script defer>
+        let mode = document.getElementById("test")
+        let spana = document.getElementById("spana")
+        let spanb = document.getElementById("spanb")
+        let spanc = document.getElementById("spanc")
+        let ina = document.getElementById("a")
+        let inb = document.getElementById("b")
+        let inc = document.getElementById("c")
+        function oblicz() {
+            let a = parseFloat(ina.value)
+            let b = parseFloat(inb.value)
+            let c = parseFloat(inc.value)
+            let out = document.getElementById("output")
+            console.log(mode.value)
+            switch (mode.value) {
+                case "prostokat": {
+                    out.textContent = `Pole to: ${a * b}`
+                    break
+                }
+                case "trojkat": {
+                out.textContent = `Pole to: ${(a * b) / 2}`
+                break
+                }
+                case "kolo": {
+                out.textContent = `Pole to: ${3.14159265359 * a*a}`
+                break
+                }
+                case "trapez": {
+                out.textContent = `Pole to: ${((a + b) * c) / 2}`
+                break
+                }
+                case "romb": {
+                out.textContent = `Pole to: ${(a * b)/2}`
+                break
+                }
+            }
+        }
+        mode.addEventListener("change", (ev) => {
+            switch (mode.value) {
+            case "prostokat": {
+                spana.textContent = "A: "
+                spanb.textContent = "B: "
+                spanb.style.visibility = "visible";
+                inb.style.visibility = "visible";
+                spanc.style.visibility = "hidden";
+                inc.style.visibility = "hidden";
+            break
+            }
+            case "trojkat": {
+                spana.textContent = "A: "
+                spanb.textContent = "H: "
+                spanb.style.visibility = "visible";
+                inb.style.visibility = "visible";
+                spanc.style.visibility = "hidden";
+                inc.style.visibility = "hidden";
+                break
+            }
+            case "kolo": {
+                spana.textContent = "R: "
+                spanb.style.visibility = "hidden";
+                inb.style.visibility = "hidden";
+                spanc.style.visibility = "hidden";
+                inc.style.visibility = "hidden";
+                break
+            }
+            case "trapez": {
+                spana.textContent = "A: "
+                spanb.textContent = "B: "
+                spanc.textContent = "H: "
+                spanb.style.visibility = "visible";
+                inb.style.visibility = "visible";
+                spanc.style.visibility = "visible";
+                inc.style.visibility = "visible";
+            break
+            }
+            case "romb": {
+            spana.textContent = "D1: "
+            spanb.textContent = "D2: "
+            spanb.style.visibility = "visible";
+            inb.style.visibility = "visible";
+            spanc.style.visibility = "hidden";
+            inc.style.visibility = "hidden";
+            break
+            }
+            }
+        })
+        document.querySelector("button").addEventListener("click", () => {
+            oblicz()
+        })
+    </script>
+</body>
+
+</html>
